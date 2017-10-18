@@ -14,7 +14,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 def get_script(id):
     db = rocksdb.DB("assign1.db", rocksdb.Options(create_if_missing=True))
     script = db.get(str.encode(id))
-    response = subprocess.check_output(['python3.6', str(os.path.join(UPLOAD_FOLDER, script))])
+    response = subprocess.check_output(["python3.6", "-c", str(os.path.join(UPLOAD_FOLDER, script))])
     return response, 200
 
 @app.route('/app/v1/scripts/', methods=['POST'])
