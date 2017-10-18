@@ -9,7 +9,7 @@ app = Flask(__name__)
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 UPLOAD_FOLDER = os.path.join(APP_ROOT, 'app/v1/scripts/')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-#@app.route('/api/v1/scripts', methods=['POST'])
+
 @app.route('/app/v1/scripts/<scriptid>', methods=['GET'])
 def get_script(id):
     db = rocksdb.DB("assign1.db", rocksdb.Options(create_if_missing=True))
