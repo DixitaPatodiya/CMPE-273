@@ -12,7 +12,7 @@ import queue
 
 from concurrent import futures
 
-_ONE_DAY_IN_SECONDS = 60 * 60 * 24d
+_ONE_DAY_IN_SECONDS = 60 * 60 * 24
 
 class MyReplicatorServicer(datastore_pb2.ReplicatorServicer):
     def __init__(self):
