@@ -1,8 +1,4 @@
-'''
-################################## server.py #############################
-#  gRPC RocksDB Server
-################################## server.py #############################
-'''
+
 import time
 import grpc
 import datastore_pb2
