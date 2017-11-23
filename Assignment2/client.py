@@ -24,10 +24,10 @@ class ClientReplicator():
             else:
                 pass
 
-def run(host, port):
-    slave = ClientReplicator(host, port)
+def main():
+    slave = ClientReplicator()
     slave.sync()
 
 
 if __name__ == "__main__":
-    run('0.0.0.0', 3000)
+    main()
