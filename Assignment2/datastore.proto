@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 message Request {
-    string data = 1;
+    string key = 1;
     string data = 2;
 }
 
